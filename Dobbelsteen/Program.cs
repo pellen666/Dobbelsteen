@@ -6,7 +6,16 @@ namespace Dobbelsteen
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Dobbelsteen dobbelsteen = new Dobbelsteen();
+
+            ConsoleKeyInfo keyinfo;
+            do
+            {
+                keyinfo = Console.ReadKey();
+                dobbelsteen.Gooi();
+                Console.WriteLine(dobbelsteen.GetAantalOgen());
+            }
+            while (keyinfo.Key != ConsoleKey.Escape);
         }
     }
 }
